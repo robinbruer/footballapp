@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "417216028020",
+    "firebase_url": "https://fifaapp-38ac0.firebaseio.com",
+    "project_id": "fifaapp-38ac0",
+    "storage_bucket": "fifaapp-38ac0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417216028020:android:eb44bbb10352c06da4e021",
+        "android_client_info": {
+          "package_name": "iths.robin.fifaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417216028020-v81b7ttlb0pmiglag6k5o7rgen74dn3n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1AtzX8JT2Qb3DRJ2Xm7pJVb_1pKfGhKk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "417216028020-v81b7ttlb0pmiglag6k5o7rgen74dn3n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
