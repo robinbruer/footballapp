@@ -1,4 +1,4 @@
-package iths.robin.fifaapp.Pages;
+package iths.robin.fifaapp.Ui.Home;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,13 +7,18 @@ import androidx.fragment.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import iths.robin.fifaapp.Pages.AboutFragment;
+import iths.robin.fifaapp.Pages.DashboardFragment;
+import iths.robin.fifaapp.Pages.HomeFragment;
 import iths.robin.fifaapp.R;
 
 public class HomeActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
+    private String TAG = "HomeActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +33,7 @@ public class HomeActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
         }
 
+        // TODO: Lamda
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -46,6 +52,8 @@ public class HomeActivity extends AppCompatActivity {
                         break;
 
                 }
+
+                // TODO: nullcheck
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
                 return true;
             }
@@ -53,4 +61,5 @@ public class HomeActivity extends AppCompatActivity {
 
 
     }
+
 }
