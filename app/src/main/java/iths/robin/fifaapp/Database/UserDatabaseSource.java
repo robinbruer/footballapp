@@ -16,4 +16,6 @@ public interface UserDatabaseSource {
     FirebaseAuth getAuthInstance();
 
     FirebaseUser getCurrentUser();
+
+    boolean checkAuthState();
 }

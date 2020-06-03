@@ -1,11 +1,9 @@
 package iths.robin.fifaapp.Pages;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -38,30 +36,9 @@ public class FinalScoreFragment extends Fragment {
        return view;
     }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        /*
-        bundle = this.getArguments();
-        if(bundle != null){
-            team1 = bundle.getString(Constants.BUNDLE_KEY_TEAM1);
-            team2 = bundle.getString(Constants.BUNDLE_KEY_TEAM2);
-            result1 = bundle.getString(Constants.BUNDLE_KEY_RESULTAT1);
-            result2 = bundle.getString(Constants.BUNDLE_KEY_RESULTAT2);
-            HelperClass.setTexttoView(getView(),team1, R.id.displayTeam1Final);
-            HelperClass.setTexttoView(getView(),team2, R.id.displayTeam2Final);
-            HelperClass.setTexttoView(getView(),result1, R.id.finalResultsTeam1Match);
-            HelperClass.setTexttoView(getView(),result2,R.id.finalResultsTeam2Match);
-        }
-
-
-         */
-    }
-
     private void goToOverview(View view){
         Fragment fragment = new LeagueTableFragment();
         requireFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
     }
-
 
 }

@@ -44,15 +44,8 @@ public class HomeFragment extends Fragment {
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        /*
-        super.onActivityCreated(savedInstanceState);
-        mAuth = FirebaseAuth.getInstance();
-       userInfo = getView().findViewById(R.id.user_home_fragment);
-        currentUser = mAuth.getCurrentUser();
-       userInfo.setText(currentUser.getEmail());
-        getActivity().findViewById(R.id.logoutbtn).setOnClickListener(this::logOut);
 
-         */
+        super.onActivityCreated(savedInstanceState);
 
     }
 

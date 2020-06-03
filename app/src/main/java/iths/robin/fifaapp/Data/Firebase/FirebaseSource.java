@@ -1,7 +1,6 @@
 package iths.robin.fifaapp.Data.Firebase;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
@@ -21,11 +20,15 @@ public class FirebaseSource implements UserDatabaseSource {
 
     private FirebaseAuth mAuth;
     private static final int RC_SIGN_IN = 123;
+
+    public FirebaseSource() {
+        mAuth = FirebaseAuth.getInstance();
+    }
+
     private String TAG = "FirebaseSource";
 
     @Override
     public FirebaseAuth getAuthInstance () {
-        mAuth = FirebaseAuth.getInstance();
         return mAuth;
     }
 
@@ -52,7 +55,6 @@ public class FirebaseSource implements UserDatabaseSource {
 
             if (resultCode == RESULT_OK) {
                 // Successfully signed in
-                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 //signedIn();
                 // ...
             } else {
@@ -68,6 +70,17 @@ public class FirebaseSource implements UserDatabaseSource {
     @Override
     public FirebaseUser getCurrentUser() {
         return mAuth.getCurrentUser();
+    }
+
+    @Override
+    public boolean checkAuthState() {
+        if(mAuth.getCurrentUser() == null){
+            Log.d(TAG, "user is null, sent back to login");
+            return false;
+        }else{
+            Log.d(TAG, "user is authenticated, user id: " + mAuth.getCurrentUser().getUid());
+            return true;
+        }
     }
 
 }

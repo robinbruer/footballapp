@@ -36,4 +36,9 @@ public class UserRepository implements UserDatabaseSource {
     public FirebaseUser getCurrentUser(){
         return firebaseSource.getCurrentUser();
     }
+
+    @Override
+    public boolean checkAuthState() {
+        return firebaseSource.checkAuthState();
+    }
 }

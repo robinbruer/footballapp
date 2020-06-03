@@ -14,6 +14,8 @@ public class Constants {
 
     public static final String BUNDLE_KEY_TEAM1 = "team1";
     public static final String BUNDLE_KEY_TEAM2 = "team2";
+    public static final String BUNDLE_KEY_TEAMID1 = "teamID1";
+    public static final String BUNDLE_KEY_TEAMID2 = "teamID2";
     public static final String BUNDLE_KEY_RESULTAT1 = "resultat1";
     public static final String BUNDLE_KEY_RESULTAT2 = "resultat2";
 }

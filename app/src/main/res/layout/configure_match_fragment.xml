@@ -30,6 +30,12 @@
         android:inputType="textPersonName"
         android:text="Team 1" />
 
+    <Spinner
+        android:id="@+id/spinnerTeam1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+
 
     <TextView
         android:id="@+id/configTeam2"
@@ -45,6 +51,14 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Team 2" />
+
+    <Spinner
+        android:id="@+id/spinnerTeam2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+
+
 
     <Button
         android:id="@+id/startMatchBtn"
