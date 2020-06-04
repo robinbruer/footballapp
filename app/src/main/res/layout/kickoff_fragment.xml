@@ -8,48 +8,40 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/createTeamTxt"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create team"
-        android:layout_marginTop="60dp"
+        android:text="Kickoff"
         android:textSize="50sp"
         android:textStyle="bold"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
 
-    <TextView
-        android:id="@+id/createTeamTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Team name:"
-        android:textSize="20sp"
+    <Button
+        android:id="@+id/configureMatchBtn"
+
+        android:text="Configure match"
+        android:textColor="@android:color/tab_indicator_text"
+        android:textSize="18sp"
+
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_shape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
         android:layout_marginTop="230dp"
-        android:layout_marginStart="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createTeamTxt"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         />
 
-
-    <EditText
-        android:id="@+id/createTeamEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Team name"
-        android:inputType="textPersonName"
-        android:text=""
-        android:textSize="20sp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createTeamTextView" />
-
     <Button
-        android:id="@+id/createTeam"
+        android:id="@+id/creatTeamBtn"
 
         android:text="Create team"
         android:textColor="@android:color/tab_indicator_text"
@@ -62,10 +54,31 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createTeamEditText"
+        app:layout_constraintTop_toBottomOf="@+id/configureMatchBtn"
         />
+
+    <Button
+        android:id="@+id/editTeamBtn"
+
+        android:text="Edit team"
+        android:textColor="@android:color/tab_indicator_text"
+        android:textSize="18sp"
+
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_shape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/creatTeamBtn"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

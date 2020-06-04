@@ -1,10 +1,10 @@
 package iths.robin.fifaapp.Database;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.google.android.gms.tasks.Task;
 
 
 public interface UserDatabaseSource {
@@ -13,9 +13,11 @@ public interface UserDatabaseSource {
 
     void onResult(int requestCode, int resultCode, Intent data);
 
-    FirebaseAuth getAuthInstance();
-
-    FirebaseUser getCurrentUser();
-
     boolean checkAuthState();
+
+    Task logOut(Context context);
+
+    String getUserEmail();
+
+    String getuserId();
 }

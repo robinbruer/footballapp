@@ -19,14 +19,13 @@ import iths.robin.fifaapp.Utils.HelperClass;
 public class CreatTeamFragment extends Fragment {
 
     private String TAG = "CreatTeamFragment";
-    private DatabaseRepository databaseRepository;
+    private DatabaseRepository databaseRepository = new DatabaseRepository();
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.create_team_fragment, container, false);
         view.findViewById(R.id.createTeam).setOnClickListener(this::createTeam);
-        databaseRepository = new DatabaseRepository();
         return view;
     }
 

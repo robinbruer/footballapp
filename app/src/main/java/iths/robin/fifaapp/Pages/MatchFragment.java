@@ -17,9 +17,8 @@ import iths.robin.fifaapp.Utils.Constants;
 import iths.robin.fifaapp.Utils.HelperClass;
 
 public class MatchFragment extends Fragment {
-
     private String TAG = "MatchFragment";
-    private DatabaseRepository databaseRepository;
+    private DatabaseRepository databaseRepository = new DatabaseRepository();
     private String team1, team2, teamId1, teamId2;
     private Bundle bundle;
     private int team1result, team2result;
@@ -29,7 +28,6 @@ public class MatchFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.match_fragment, container, false);
-        databaseRepository = new DatabaseRepository();
         bundle = this.getArguments();
         if(bundle != null){
             team1 = bundle.getString(Constants.BUNDLE_KEY_TEAM1);
@@ -72,7 +70,7 @@ public class MatchFragment extends Fragment {
 
         Fragment fragment = new FinalScoreFragment();
         fragment.setArguments(bundle);
-        requireFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+        requireFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).addToBackStack(null).commit();
     }
 
     private void calcResult() {

@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:background="@color/blue"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/shape_screen"
     android:gravity="center"
     android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/editTeamTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Team"
+        android:layout_marginTop="60dp"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
         android:id="@+id/editTeamTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:layout_marginStart="20dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTeamTxt"
         android:text="Team name:"
         />
 
@@ -18,14 +39,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Team name"
+        android:layout_marginStart="20dp"
         android:inputType="textPersonName"
-        android:text="" />
+        android:text=""
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTeamTextView" />
 
     <Button
         android:id="@+id/editTeam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Create team" />
+
+        android:text="Create team"
+        android:textColor="@android:color/tab_indicator_text"
+        android:textSize="18sp"
+
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_shape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTeamEditText"
+        />
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

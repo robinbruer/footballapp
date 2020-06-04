@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Pages.Dashboard"></activity>
-        <activity android:name=".Ui.Home.HomeActivity" />
+        <activity android:name=".Ui.Home.HomeActivity" android:screenOrientation="portrait"/>
         <activity android:name=".Authentication.SignIn" />
         <activity android:name=".Ui.Auth.LoginActivity">
             <intent-filter>

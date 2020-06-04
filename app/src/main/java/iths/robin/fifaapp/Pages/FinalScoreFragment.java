@@ -38,7 +38,7 @@ public class FinalScoreFragment extends Fragment {
 
     private void goToOverview(View view){
         Fragment fragment = new LeagueTableFragment();
-        requireFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+        requireFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).addToBackStack(null).commit();
     }
 
 }

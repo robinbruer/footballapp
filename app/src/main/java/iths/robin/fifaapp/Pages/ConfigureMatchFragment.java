@@ -1,7 +1,6 @@
 package iths.robin.fifaapp.Pages;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,11 +10,7 @@ import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.Tasks;
 
 import java.util.List;
@@ -30,7 +25,7 @@ public class ConfigureMatchFragment extends Fragment {
 
     private String TAG = "ConfigureMatchFragment";
     private Spinner spinnerTeam1, spinnerTeam2;
-    private DatabaseRepository databaseRepository;
+    private DatabaseRepository databaseRepository = new DatabaseRepository();
     private HomeSpinnerClass homeSpinnerClass;
     private AwaySpinnerClass awaySpinnerClass;
 
@@ -42,7 +37,6 @@ public class ConfigureMatchFragment extends Fragment {
         spinnerTeam2 = view.findViewById(R.id.spinnerTeam2);
         homeSpinnerClass = new HomeSpinnerClass();
         awaySpinnerClass = new AwaySpinnerClass();
-        databaseRepository = new DatabaseRepository();
         return view;
     }
 

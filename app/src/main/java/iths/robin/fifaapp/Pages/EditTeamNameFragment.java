@@ -19,16 +19,14 @@ import iths.robin.fifaapp.Utils.HelperClass;
 
 public class EditTeamNameFragment extends Fragment {
     private String TAG = "EditTeamNameFragment";
-    private UserRepository userRepository;
-    private DatabaseRepository databaseRepository;
+    private UserRepository userRepository = new UserRepository();
+    private DatabaseRepository databaseRepository = new DatabaseRepository();
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.edit_team_fragment, container, false);
         view.findViewById(R.id.editTeam).setOnClickListener(this::editTeam);
-        userRepository = new UserRepository();
-        databaseRepository = new DatabaseRepository();
         return view;
     }
 
@@ -37,7 +35,7 @@ public class EditTeamNameFragment extends Fragment {
 
         TeamUser teamUser = new TeamUser();
         teamUser.setTeamName(teamName);
-        teamUser.setUserId(userRepository.getCurrentUser().getUid());
+        teamUser.setUserId(userRepository.getuserId());
 
         databaseRepository.creatTeam(teamUser);
 

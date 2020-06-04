@@ -1,7 +1,6 @@
 package iths.robin.fifaapp.Pages;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,15 +12,14 @@ import androidx.fragment.app.Fragment;
 
 import iths.robin.fifaapp.R;
 
-
-public class AboutFragment extends Fragment implements View.OnClickListener {
-    private String TAG = "AboutFragment";
+public class KickoffFragment extends Fragment implements View.OnClickListener{
+    private String TAG = "KickoffFragment";
     private Fragment fragment;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.about_fragment, container, false);
+        View view = inflater.inflate(R.layout.kickoff_fragment, container, false);
 
         Button one = view.findViewById(R.id.configureMatchBtn);
         one.setOnClickListener(this);
@@ -47,7 +45,6 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
             default:
                 break;
         }
-        requireFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+        requireFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).addToBackStack(null).commit();
     }
-
 }

@@ -4,16 +4,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import iths.robin.fifaapp.Pages.AboutFragment;
 import iths.robin.fifaapp.Pages.DashboardFragment;
 import iths.robin.fifaapp.Pages.HomeFragment;
+import iths.robin.fifaapp.Pages.KickoffFragment;
+import iths.robin.fifaapp.Pages.LeagueTableFragment;
 import iths.robin.fifaapp.R;
 
 public class HomeActivity extends AppCompatActivity {
@@ -40,21 +39,18 @@ public class HomeActivity extends AppCompatActivity {
                 Fragment fragment = null;
 
                 switch (item.getItemId()) {
-                    case R.id.dashboard:
-                        fragment = new DashboardFragment();
-                        //overridePendingTransition(0, 0);
+                    case R.id.table:
+                        fragment = new LeagueTableFragment();
                         break;
                     case R.id.home:
                         fragment = new HomeFragment();
                         break;
-                    case R.id.about:
-                        fragment = new AboutFragment();
+                    case R.id.kickoff:
+                        fragment = new KickoffFragment();
                         break;
-
                 }
 
-                // TODO: nullcheck
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).addToBackStack(null).commit();
                 return true;
             }
         });

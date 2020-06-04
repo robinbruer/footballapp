@@ -1,11 +1,17 @@
 package iths.robin.fifaapp.Data.Firebase;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+import android.view.View;
+
+import androidx.annotation.NonNull;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -28,11 +34,6 @@ public class FirebaseSource implements UserDatabaseSource {
     private String TAG = "FirebaseSource";
 
     @Override
-    public FirebaseAuth getAuthInstance () {
-        return mAuth;
-    }
-
-    @Override
     public void authProviders(Activity context) {
         // Choose authentication providers
         List<AuthUI.IdpConfig> providers = Arrays.asList(
@@ -42,7 +43,7 @@ public class FirebaseSource implements UserDatabaseSource {
 
         context.startActivityForResult(
                 AuthUI.getInstance()
-                        .createSignInIntentBuilder()
+                        .createSignInIntentBuilder().setIsSmartLockEnabled(false)
                         .setAvailableProviders(providers)
                         .build(),
                 RC_SIGN_IN);
@@ -67,10 +68,6 @@ public class FirebaseSource implements UserDatabaseSource {
         }
     }
 
-    @Override
-    public FirebaseUser getCurrentUser() {
-        return mAuth.getCurrentUser();
-    }
 
     @Override
     public boolean checkAuthState() {
@@ -81,6 +78,27 @@ public class FirebaseSource implements UserDatabaseSource {
             Log.d(TAG, "user is authenticated, user id: " + mAuth.getCurrentUser().getUid());
             return true;
         }
+    }
+
+    public Task logOut(Context context){
+        return AuthUI.getInstance()
+                .signOut(context)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Log.d(TAG, "onComplete: user signed out");
+
+                    }
+                });
+    }
+
+    @Override
+    public String getUserEmail() {
+        return mAuth.getCurrentUser().getEmail();
+    }
+
+    @Override
+    public String getuserId() {
+        return mAuth.getCurrentUser().getUid();
     }
 
 }
