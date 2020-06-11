@@ -11,7 +11,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kickoff"
+        android:text="@string/kickoff"
         android:textSize="50sp"
         android:textStyle="bold"
         android:layout_marginTop="60dp"
@@ -23,7 +23,7 @@
     <Button
         android:id="@+id/configureMatchBtn"
 
-        android:text="Configure match"
+        android:text="@string/configure_match"
         android:textColor="@android:color/tab_indicator_text"
         android:textSize="18sp"
 
@@ -34,7 +34,7 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="140dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
@@ -43,7 +43,7 @@
     <Button
         android:id="@+id/creatTeamBtn"
 
-        android:text="Create team"
+        android:text="@string/create_team"
         android:textColor="@android:color/tab_indicator_text"
         android:textSize="18sp"
 
@@ -63,7 +63,7 @@
     <Button
         android:id="@+id/editTeamBtn"
 
-        android:text="Edit team"
+        android:text="@string/edit_team"
         android:textColor="@android:color/tab_indicator_text"
         android:textSize="18sp"
 
@@ -80,5 +80,24 @@
         app:layout_constraintTop_toBottomOf="@+id/creatTeamBtn"
         />
 
+    <Button
+        android:id="@+id/createLeugueBtn"
+
+        android:text="@string/create_league"
+        android:textColor="@android:color/tab_indicator_text"
+        android:textSize="18sp"
+
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_shape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTeamBtn"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

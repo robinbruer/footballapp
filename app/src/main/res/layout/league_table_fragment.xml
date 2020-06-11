@@ -24,14 +24,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dip"
-            android:text="Teams"
+            android:text="@string/teams"
             android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dip"
-            android:text="MP"
+            android:text="@string/mp"
             android:textAlignment="center"
             android:textSize="20sp" />
 
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dip"
-            android:text="W"
+            android:text="@string/w"
             android:textAlignment="center"
             android:textSize="20sp" />
 
@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dip"
-            android:text="D"
+            android:text="@string/d"
             android:textAlignment="center"
             android:textSize="20sp" />
 
@@ -55,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dip"
-            android:text="L"
+            android:text="@string/l"
             android:textAlignment="center"
             android:textSize="20sp" />
 
@@ -63,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dip"
-            android:text="GF"
+            android:text="@string/gf"
             android:textAlignment="center"
             android:textSize="20sp" />
 
@@ -71,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dip"
-            android:text="GA"
+            android:text="@string/ga"
             android:textAlignment="center"
             android:textSize="20sp" />
 
@@ -79,7 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dip"
-            android:text="+/-"
+            android:text="@string/gd"
             android:textAlignment="center"
             android:textSize="20sp" />
 
@@ -87,7 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dip"
-            android:text="PTS"
+            android:text="@string/pts"
             android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold" />

@@ -37,6 +37,6 @@ public class CreatTeamFragment extends Fragment {
 
         databaseRepository.creatTeam(teamUser);
 
-        Toasty.success(getActivity(), "Created new team!", Toast.LENGTH_SHORT, true).show();
+        Toasty.success(getActivity(), getString(R.string.created_new_team), Toast.LENGTH_SHORT, true).show();
     }
 }

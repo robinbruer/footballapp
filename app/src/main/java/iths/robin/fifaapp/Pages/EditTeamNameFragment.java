@@ -39,7 +39,7 @@ public class EditTeamNameFragment extends Fragment {
 
         databaseRepository.creatTeam(teamUser);
 
-        Toasty.success(getActivity(), "Updated team name!", Toast.LENGTH_SHORT, true).show();
+        Toasty.success(getActivity(), getString(R.string.updated_team_name), Toast.LENGTH_SHORT, true).show();
 
     }
 }

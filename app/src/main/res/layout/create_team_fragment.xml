@@ -11,7 +11,7 @@
         android:id="@+id/createTeamTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create team"
+        android:text="@string/create_team"
         android:layout_marginTop="60dp"
         android:textSize="50sp"
         android:textStyle="bold"
@@ -24,7 +24,7 @@
         android:id="@+id/createTeamTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Team name:"
+        android:text="@string/team_name"
         android:textSize="20sp"
         android:layout_marginTop="230dp"
         android:layout_marginStart="20dp"
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Team name"
+        android:hint="@string/team_name"
         android:inputType="textPersonName"
         android:text=""
         android:textSize="20sp"
@@ -51,7 +51,7 @@
     <Button
         android:id="@+id/createTeam"
 
-        android:text="Create team"
+        android:text="@+id/createTeamTxt"
         android:textColor="@android:color/tab_indicator_text"
         android:textSize="18sp"
 

@@ -1,10 +1,44 @@
 <resources>
     <string name="app_name">FifaApp</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="facebook_application_id" translatable="false">1082125215505567</string>
     <string name="facebook_login_protocol_scheme" translatable="false">fb1082125215505567</string>
     <string name="facebook_app_id">1082125215505567</string>
     <string name="fb_login_protocol_scheme">fb1082125215505567</string>
+
+
+    <string name="created_new_team">Created new team!</string>
+    <string name="updated_team_name">Updated team name!</string>
+    <string name="log_in">Log In</string>
+    <string name="configure_match">Configure match</string>
+    <string name="choose_home_team">Choose Home Team</string>
+    <string name="choose_away_team">Choose Away Team</string>
+    <string name="start_match">Start Match</string>
+    <string name="create_team">Create team</string>
+    <string name="team_name">Team name:</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="edit_team">Edit Team</string>
+    <string name="final_score">Final Score</string>
+    <string name="home_team">Home Team</string>
+    <string name="away_team">Away Team</string>
+    <string name="league_table">League Table</string>
+    <string name="home">Home</string>
+    <string name="log_out">Log Out</string>
+    <string name="kickoff">Kickoff</string>
+    <string name="teams">Teams</string>
+    <string name="mp">MP</string>
+    <string name="w">W</string>
+    <string name="d">D</string>
+    <string name="l">L</string>
+    <string name="gf">GF</string>
+    <string name="ga">GA</string>
+    <string name="pts">PTS</string>
+    <string name="gd">+/-</string>
+    <string name="play_match">Play match</string>
+    <string name="finish_match">Finish Match</string>
+    <string name="add_new_league">Add new League:</string>
+    <string name="league_name">League name</string>
+    <string name="create_league">Create League</string>
+
 </resources>

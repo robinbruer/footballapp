@@ -11,7 +11,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Configure match"
+        android:text="@string/configure_match"
         android:layout_marginTop="60dp"
         android:textSize="50sp"
         android:textStyle="bold"
@@ -24,7 +24,7 @@
         android:id="@+id/configTeam1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Choose team 1"
+        android:text="@string/choose_home_team"
         android:textSize="20sp"
         android:layout_marginTop="230dp"
         android:layout_marginStart="20dp"
@@ -50,7 +50,7 @@
         android:id="@+id/configTeam2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Choose team 2"
+        android:text="@string/choose_away_team"
         android:textSize="20sp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
@@ -73,7 +73,7 @@
     <Button
         android:id="@+id/startMatchBtn"
 
-        android:text="Start Match"
+        android:text="@string/start_match"
         android:textColor="@android:color/tab_indicator_text"
         android:textSize="18sp"
 

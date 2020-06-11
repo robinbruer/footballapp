@@ -27,6 +27,8 @@ public class KickoffFragment extends Fragment implements View.OnClickListener{
         two.setOnClickListener(this);
         Button three = view.findViewById(R.id.editTeamBtn);
         three.setOnClickListener(this);
+        Button four = view.findViewById(R.id.createLeugueBtn);
+        four.setOnClickListener(this);
         return view;
     }
 
@@ -42,6 +44,8 @@ public class KickoffFragment extends Fragment implements View.OnClickListener{
             case R.id.editTeamBtn:
                 fragment = new EditTeamNameFragment();
                 break;
+            case R.id.createLeugueBtn:
+                fragment = new AddLeagueFragment();
             default:
                 break;
         }

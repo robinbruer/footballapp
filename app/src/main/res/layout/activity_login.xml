@@ -18,7 +18,7 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
-        android:text="Log In"
+        android:text="@string/log_in"
         android:textColor="@android:color/tab_indicator_text"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
